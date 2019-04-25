@@ -59,23 +59,41 @@ body b {
 
 .breadcrumb-nav {
     margin: 0;
-    position: absolute;
-    z-index: 1;
+    position: relative;
+    z-index: 1 !important;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-    top: 3rem
+    top: 5rem;
+    width: 90%;
+    text-align: center
+}
+
+.breadcrumb-nav .inside ul li {
+    margin-bottom: -2rem
 }
 
 .breadcrumb-nav .inside ul li:last-child a span {
     margin: 0
 }
 
+.breadcrumb-nav .inside ul li:last-child a span::after {
+    display: none
+}
+
 .breadcrumb-nav .inside ul li a span {
     color: #8C7971;
     font-size: 1.2rem;
-    margin-right: 1rem
+    margin-right: 1.5rem;
+    position: relative
+}
+
+.breadcrumb-nav .inside ul li a span::after {
+    position: absolute;
+    content: '/';
+    color: #8C7971;
+    right: -1.3rem
 }
 
 .breadcrumb-nav .inside ul i {
@@ -154,7 +172,7 @@ body b {
         -ms-flex-pack: center;
             justify-content: center;
     margin-top: 5rem;
-    padding-bottom: 2rem
+    padding-bottom: 3rem
 }
 
 .article-title .inside .at-content .at-publication {
@@ -194,7 +212,10 @@ body b {
 .article-navigation .inside ul.an-list li.an-item-previous,
 .article-navigation .inside ul.an-list li.an-item-next {
     margin: 3rem 3rem 0rem 3rem;
-    max-width: 46rem
+    max-width: 46rem;
+    height: auto;
+    -webkit-box-shadow: 0 15px 35px -25px rgba(37, 37, 37, 0.73);
+            box-shadow: 0 15px 35px -25px rgba(37, 37, 37, 0.73)
 }
 
 .article-navigation .inside ul.an-list li.an-item-previous a,
@@ -219,8 +240,6 @@ body b {
 .article-navigation .inside ul.an-list li.an-item-previous a .an-item-content,
 .article-navigation .inside ul.an-list li.an-item-next a .an-item-content {
     background: #FFFFFF;
-    -webkit-box-shadow: 0 15px 35px -25px rgba(37, 37, 37, 0.73);
-            box-shadow: 0 15px 35px -25px rgba(37, 37, 37, 0.73);
     padding: 3rem;
     width: 100%
 }
@@ -602,12 +621,15 @@ i.icon-menu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     position: relative;
     z-index: 2
 }
@@ -698,6 +720,10 @@ i.icon-menu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-preferred-size: 46%;
+        flex-basis: 46%;
+    min-width: 46%;
+    max-width: 46%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -2025,7 +2051,8 @@ ul {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    width: 100%
+    width: 100%;
+    padding-top: 0
 }
 
 .temoignages-exposants.list-articles .slider-content .slider-item .la-item-img,
@@ -2222,8 +2249,12 @@ header.site-banner.headroom--unpinned .inside .header-logo {
     padding: 1rem 0.5rem 1rem 1.5rem
 }
 
+header.site-banner.headroom--unpinned .inside .sb-menu-trigger {
+    margin-top: 0.7rem
+}
+
 header.site-banner.headroom--unpinned .inside nav {
-    top: 7.9rem
+    top: 7rem
 }
 
 header.site-banner:not(.headroom--top) {
@@ -2263,16 +2294,16 @@ header.site-banner .inside .lang-switcher button {
 header.site-banner .inside .lang-switcher button::after {
     position: absolute;
     top: 1.4rem;
-    right: -.2rem;
+    right: -0.2rem;
     display: none
 }
 
 header.site-banner .inside .lang-switcher .ls-lang-list {
     z-index: 9999;
     background: white;
-    border-left: 1px solid #F4F4F4;
-    border-right: 1px solid #F4F4F4;
-    border-bottom: 1px solid #F4F4F4
+    border-left: 1px solid #f4f4f4;
+    border-right: 1px solid #f4f4f4;
+    border-bottom: 1px solid #f4f4f4
 }
 
 header.site-banner .inside .lang-switcher .ls-lang-list li.ls-lang-item a.ls-lang-link abbr {
@@ -2302,7 +2333,7 @@ header.site-banner .inside .block form button i {
 }
 
 header.site-banner .inside .block form button i::before {
-    content: '';
+    content: "";
     background-image: url("../salon_du_fromage_2020_preprod_mobile/pictos/search.svg");
     width: 1.6rem;
     height: 1.6rem;
@@ -2332,11 +2363,11 @@ header.site-banner .inside .block .ql-list .linkid726170 .btn-primary {
     left: -41.5rem;
     padding: 1.5rem 6.2rem 1.5rem 1.5rem;
     font-size: 13px;
-    -webkit-transition: -webkit-transform .2s ease;
-    transition: -webkit-transform .2s ease;
-    -o-transition: transform .2s ease;
-    transition: transform .2s ease;
-    transition: transform .2s ease, -webkit-transform .2s ease;
+    -webkit-transition: -webkit-transform 0.2s ease;
+    transition: -webkit-transform 0.2s ease;
+    -o-transition: transform 0.2s ease;
+    transition: transform 0.2s ease;
+    transition: transform 0.2s ease, -webkit-transform 0.2s ease;
     color: #64C2C8;
     text-transform: inherit;
     display: none
@@ -2349,7 +2380,7 @@ header.site-banner .inside .block .ql-list .linkid726170 .btn-primary:hover {
 }
 
 header.site-banner .inside .block .ql-list .linkid726170 .btn-primary::after {
-    content: '';
+    content: "";
     position: absolute;
     background-image: url("../salon_du_fromage_2020_preprod_mobile/pictos/stand.svg");
     width: 3.2rem;
@@ -2403,9 +2434,9 @@ header.site-banner .inside .block:nth-child(2) ul.ql-list li {
     padding: 0;
     margin-left: 0;
     position: relative;
-    -webkit-transition: all .2s ease;
-    -o-transition: all .2s ease;
-    transition: all .2s ease;
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
     cursor: pointer
 }
 
@@ -2419,14 +2450,20 @@ header.site-banner .inside .block:nth-child(2) ul.ql-list li a {
     font-size: 12px;
     color: #8C7971;
     padding: 0;
-    margin-right: 8px
+    margin-right: 0;
+    width: 4rem;
+    height: 4.5rem
 }
 
 header.site-banner .inside .block:nth-child(2) ul.ql-list li a i {
-    -webkit-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
-    bottom: .8rem
+    -webkit-transform: translateY(-3px);
+        -ms-transform: translateY(-3px);
+            transform: translateY(-3px);
+    height: 4.5rem;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    bottom: 0.8rem
 }
 
 header.site-banner .inside .block:nth-child(2) ul.ql-list li a i:hover {
@@ -2437,8 +2474,19 @@ header.site-banner .inside .block:nth-child(2) ul.ql-list li a span {
     display: none
 }
 
-header.site-banner .inside .block:nth-child(2) ul.ql-list li:not(.linkid728314) {
+header.site-banner .inside .block:nth-child(2) ul.ql-list li .icon {
+    margin-right: 0
+}
+
+header.site-banner .inside .block:nth-child(2) ul.ql-list li.linkid726175,
+header.site-banner .inside .block:nth-child(2) ul.ql-list li.linkid726174 {
     display: none
+}
+
+header.site-banner .inside .block:nth-child(2) ul.ql-list .linkid728314 {
+    -webkit-box-ordinal-group: -2;
+        -ms-flex-order: -3;
+            order: -3
 }
 
 header.site-banner .inside .block:nth-child(2) ul.ql-list .linkid728314:hover {
@@ -2448,6 +2496,7 @@ header.site-banner .inside .block:nth-child(2) ul.ql-list .linkid728314:hover {
 }
 
 header.site-banner .inside .block:nth-child(2) ul.ql-list .linkid728314 a {
+    width: 10rem;
     position: relative
 }
 
@@ -2463,7 +2512,7 @@ header.site-banner .inside .block:nth-child(2) ul.ql-list .linkid728314 a::befor
             justify-content: center;
     content: "Abonnez-vous à la newsletter";
     position: relative;
-    background: #8C7971;
+    background: #8c7971;
     color: white;
     font-family: "cxpm-Gudea-bold", Helvetica, Arial, sans-serif;
     font-weight: 200;
@@ -2503,7 +2552,7 @@ header.site-banner .inside #cxpmClientAccountWidget .not-logged {
 header.site-banner .inside #cxpmClientAccountWidget .not-logged .widget-text {
     padding-top: 0;
     margin-right: 4rem;
-    border-right: .15rem solid #E7E7E7
+    border-right: 0.15rem solid #e7e7e7
 }
 
 header.site-banner .inside #cxpmClientAccountWidget .not-logged .widget-text .openCapMobile a {
@@ -2525,20 +2574,20 @@ header.site-banner .inside #cxpmClientAccountWidget .not-logged .widget-text {
 }
 
 header.site-banner .inside #cxpmClientAccountWidget .not-logged .widget-text::before {
-    content: '';
+    content: "";
     display: block;
     position: relative;
     background-image: url("../salon_du_fromage_2020_preprod_mobile/pictos/account.svg");
     width: 1.3rem;
     height: 1.4rem;
-    bottom: .9rem;
+    bottom: 0.9rem;
     display: none
 }
 
 header.site-banner .inside #cxpmClientAccountWidget .not-logged .widget-text span.openCapMobile a.openCapTrigger {
-    -webkit-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
     padding-right: 1rem
 }
 
@@ -2562,10 +2611,10 @@ header.site-banner .inside .widget-my-selection {
 }
 
 header.site-banner .inside .widget-my-selection::before {
-    content: '';
+    content: "";
     position: relative;
     display: block;
-    background-image: url(/salon_du_fromage_2020_preprod_mobile/pictos/bag.svg);
+    background-image: url("../salon_du_fromage_2020_preprod_mobile/pictos/bag.svg");
     width: 1.3rem;
     height: 1.7rem;
     bottom: auto;
@@ -2602,7 +2651,7 @@ header.site-banner .inside .header-logo {
         -ms-flex-align: center;
             align-items: center;
     position: relative;
-    padding: 1.5rem 0.5rem 1.5rem 1.5rem;
+    padding: 1.5rem 0 1.5rem 1.5rem;
     -webkit-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out
@@ -2642,9 +2691,9 @@ header.site-banner .inside .header-logo .header-logo-txt p span {
 header.site-banner .inside .header-logo .header-logo-txt a.btn {
     border: none;
     position: relative;
-    -webkit-transition: all .2s ease;
-    -o-transition: all .2s ease;
-    transition: all .2s ease;
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
     background: #64C2C8;
     color: white;
     padding: 0.9rem;
@@ -2669,10 +2718,9 @@ header.site-banner .inside .header-logo .header-logo-txt a.btn:hover {
 }
 
 header.site-banner .inside .header-logo .header-logo-txt a.btn::after {
-    content: '';
+    content: "";
     display: block;
     position: relative;
-    background-image: url("../salon_du_fromage_2020_preprod_mobile/pictos/badge.svg");
     background-repeat: no-repeat;
     background-size: 100%;
     width: 2rem;
@@ -2682,8 +2730,23 @@ header.site-banner .inside .header-logo .header-logo-txt a.btn::after {
     margin-left: 0.5rem
 }
 
+header.site-banner .inside .header-logo .header-logo-txt a.btn.badge::after {
+    background-image: url("../salon_du_fromage_2020_preprod_mobile/pictos/badge.svg")
+}
+
+header.site-banner .inside .header-logo .header-logo-txt a.btn.exposant {
+    background: #89c0c326;
+    color: #64C2C8;
+    margin-left: 0.7rem
+}
+
+header.site-banner .inside .header-logo .header-logo-txt a.btn.exposant::after {
+    height: 1.9rem;
+    background-image: url("../salon_du_fromage_2020_preprod_mobile/pictos/stand.svg")
+}
+
 header.site-banner .inside .sb-menu-trigger {
-    width: 4.4rem;
+    width: 6.4rem;
     height: 4.4rem;
     position: relative;
     background-color: transparent;
@@ -2692,20 +2755,19 @@ header.site-banner .inside .sb-menu-trigger {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     left: auto;
     margin-left: auto;
-    margin-right: 4.5rem;
-    margin-top: 1.5rem
+    margin-right: 0.8rem;
+    margin-top: 1.2rem;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out
 }
 
 header.site-banner .inside .sb-menu-trigger i {
@@ -2715,9 +2777,9 @@ header.site-banner .inside .sb-menu-trigger i {
     display: block;
     background-color: #64C2C8;
     border-radius: 10rem;
-    -webkit-transition: all .25s ease;
-    -o-transition: all .25s ease;
-    transition: all .25s ease
+    -webkit-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease
 }
 
 header.site-banner .inside .sb-menu-trigger i::before {
@@ -2727,15 +2789,12 @@ header.site-banner .inside .sb-menu-trigger i::before {
     display: block;
     background-color: #64C2C8;
     border-radius: 10rem;
-    -webkit-transition: all .25s ease;
-    -o-transition: all .25s ease;
-    transition: all .25s ease;
+    -webkit-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
     top: 1.6rem;
     position: absolute;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
+    left: 0;
     line-height: 5.2rem
 }
 
@@ -2746,15 +2805,12 @@ header.site-banner .inside .sb-menu-trigger i::after {
     display: block;
     background-color: #64C2C8;
     border-radius: 10rem;
-    -webkit-transition: all .25s ease;
-    -o-transition: all .25s ease;
-    transition: all .25s ease;
+    -webkit-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
     bottom: 1.6rem;
     position: absolute;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%)
+    left: 0
 }
 
 header.site-banner .inside .sb-menu-trigger span {
@@ -2768,7 +2824,7 @@ header.site-banner .inside .sb-menu-trigger span {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    right: -3.5rem;
+    right: 0;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -2781,7 +2837,7 @@ header.site-banner .inside .sb-menu-trigger span {
 
 header.site-banner .inside nav {
     background: #64C2C8;
-    top: 8.9rem;
+    top: 8rem;
     left: 0;
     width: 100vw;
     overflow-y: scroll;
@@ -2812,7 +2868,6 @@ header.site-banner .inside nav .mn-menu-line ul.mn-menu-lvl1 li.mn-item-lvl-1 {
 }
 
 header.site-banner .inside nav .mn-menu-line ul.mn-menu-lvl1 li.mn-item-lvl-1#widgetMobileLinkOpenCap .mn-link {
-    padding-left: 2rem;
     color: #64C2C8
 }
 
@@ -2845,7 +2900,7 @@ header.site-banner .inside nav .mn-menu-line ul.mn-menu-lvl1 li.mn-item-lvl-1 a.
     padding: 1rem;
     min-height: 54px;
     max-height: 54px;
-    padding: 0;
+    padding: 0 0 0 2rem;
     font-size: 1.8rem;
     line-height: 2.2rem;
     display: -webkit-box;
@@ -2870,8 +2925,7 @@ header.site-banner .inside nav .mn-menu-line ul.mn-menu-lvl1 li.mn-item-lvl-1 a.
 }
 
 header.site-banner .inside nav .mn-menu-line ul.mn-menu-lvl1 li.mn-item-lvl-1 a.mn-link span {
-    color: #64C2C8;
-    margin-left: 2rem
+    color: #64C2C8
 }
 
 header.site-banner .inside nav .mn-menu-line ul.mn-menu-lvl1 li.mn-item-lvl-1 a.mn-link span::before {
@@ -2922,7 +2976,7 @@ header.site-banner .inside nav .mn-menu-line ul.mn-menu-lvl1 ul.mn-menu-lvl2 li.
 
 header.site-banner .inside nav .mn-menu-line ul.mn-menu-lvl1 ul.mn-menu-lvl2 li.mn-item-lvl-2 a.mn-link span.mn-link-text {
     font-size: 14px;
-    color: #B7B7B7;
+    color: #b7b7b7;
     padding-left: 3rem
 }
 
@@ -2961,7 +3015,7 @@ header.site-banner .inside nav .mn-menu-line ul.mn-menu-lvl1 ul.mn-menu-lvl2 li.
     padding-left: 0;
     padding-right: 0;
     position: relative;
-    margin-right: 1.5rem
+    margin-right: 1.2rem
 }
 
 .header-logo .header-logo-txt .brand:hover {
@@ -2974,8 +3028,8 @@ header.site-banner .inside nav .mn-menu-line ul.mn-menu-lvl1 ul.mn-menu-lvl2 li.
     display: block;
     background-image: url("../salon_du_fromage_2020_preprod_mobile/img/logo.png");
     background-repeat: no-repeat;
-    width: 8.9rem;
-    height: 4.6rem;
+    width: 6.9rem;
+    height: 3.8rem;
     left: 0;
     top: 0;
     background-size: 100%;
@@ -2992,11 +3046,11 @@ header.site-banner .inside nav .mn-menu-line ul.mn-menu-lvl1 ul.mn-menu-lvl2 li.
     position: absolute;
     right: 3rem;
     top: 3.8rem;
-    -webkit-transition: -webkit-transform .2s ease;
-    transition: -webkit-transform .2s ease;
-    -o-transition: transform .2s ease;
-    transition: transform .2s ease;
-    transition: transform .2s ease, -webkit-transform .2s ease;
+    -webkit-transition: -webkit-transform 0.2s ease;
+    transition: -webkit-transform 0.2s ease;
+    -o-transition: transform 0.2s ease;
+    transition: transform 0.2s ease;
+    transition: transform 0.2s ease, -webkit-transform 0.2s ease;
     background: #64C2C8;
     color: white;
     padding: 1.9rem 6.2rem 1.9rem 1.9rem;
@@ -3012,7 +3066,7 @@ header.site-banner .inside nav .mn-menu-line ul.mn-menu-lvl1 ul.mn-menu-lvl2 li.
 }
 
 .header-logo .header-logo-txt a.btn::after {
-    content: '';
+    content: "";
     position: absolute;
     background-image: url("../salon_du_fromage_2020_preprod_desktop/pictos/badge.svg");
     width: 3.2rem;
@@ -5590,7 +5644,7 @@ html[lang="fr"] body:not(.front) #zone1 .main-navigation .mn-menu-line .mn-menu 
     background-position: center;
     z-index: 1;
     margin-top: 1.5rem;
-    background-image: url(/theme/sima2019_git_mobile/images/evenements.jpg)
+    background-image: url("../theme/sima2019_git_mobile/images/evenements.jpg")
 }
 
 .content399632 .catal-nav-ex,
