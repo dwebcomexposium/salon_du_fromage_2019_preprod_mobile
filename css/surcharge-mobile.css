@@ -580,7 +580,7 @@ i.icon-menu {
 }
 
 .userAccount-newsletter {
-    display: none
+    display: none !important
 }
 
 .chiffres-cles {
@@ -2520,7 +2520,8 @@ header.site-banner .inside #cxpmClientAccountWidget .not-logged .widget-text {
     display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center
+            align-items: center;
+    display: none
 }
 
 header.site-banner .inside #cxpmClientAccountWidget .not-logged .widget-text::before {
@@ -2530,7 +2531,8 @@ header.site-banner .inside #cxpmClientAccountWidget .not-logged .widget-text::be
     background-image: url("../salon_du_fromage_2020_preprod_mobile/pictos/account.svg");
     width: 1.3rem;
     height: 1.4rem;
-    bottom: .9rem
+    bottom: .9rem;
+    display: none
 }
 
 header.site-banner .inside #cxpmClientAccountWidget .not-logged .widget-text span.openCapMobile a.openCapTrigger {
@@ -2807,6 +2809,11 @@ header.site-banner .inside nav .mn-menu-line ul.mn-menu-lvl1 li.mn-item-lvl-1 {
     text-align: left;
     background: white;
     border-bottom: 1px solid #f0f0f0
+}
+
+header.site-banner .inside nav .mn-menu-line ul.mn-menu-lvl1 li.mn-item-lvl-1#widgetMobileLinkOpenCap .mn-link {
+    padding-left: 2rem;
+    color: #64C2C8
 }
 
 header.site-banner .inside nav .mn-menu-line ul.mn-menu-lvl1 li.mn-item-lvl-1.mn-item-has-submenu .mn-link::before {
