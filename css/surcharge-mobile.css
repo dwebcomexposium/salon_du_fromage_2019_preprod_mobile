@@ -579,6 +579,10 @@ i.icon-menu {
     bottom: -.3rem
 }
 
+.userAccount-newsletter {
+    display: none
+}
+
 .chiffres-cles {
     padding: 6.5rem 0 1.5rem 0;
     margin: 0 auto;
@@ -615,7 +619,7 @@ i.icon-menu {
 .chiffres-cles .item .item-pro:after {
     content: '';
     position: absolute;
-    background-image: url("/salon_du_fromage_2020_preprod_mobile/pictos/chiffre-entree.svg");
+    background-image: url("../salon_du_fromage_2020_preprod_mobile/pictos/chiffre-entree.svg");
     background-size: 100%;
     background-repeat: no-repeat;
     width: 6.4rem;
@@ -636,7 +640,7 @@ i.icon-menu {
 .chiffres-cles .item .item-entreprise:after {
     content: '';
     position: absolute;
-    background-image: url("/salon_du_fromage_2020_preprod_mobile/pictos/chiffre-entreprise.png");
+    background-image: url("../salon_du_fromage_2020_preprod_mobile/pictos/chiffre-entreprise.png");
     background-size: 100%;
     background-repeat: no-repeat;
     width: 6.6rem;
@@ -656,7 +660,7 @@ i.icon-menu {
 .chiffres-cles .item .item-visiteur:after {
     content: '';
     position: absolute;
-    background-image: url("/salon_du_fromage_2020_preprod_mobile/pictos/chiffre-visiteur.svg");
+    background-image: url("../salon_du_fromage_2020_preprod_mobile/pictos/chiffre-visiteur.svg");
     background-size: 100%;
     background-repeat: no-repeat;
     width: 7.9rem;
@@ -676,7 +680,7 @@ i.icon-menu {
 .chiffres-cles .item .item-continent:after {
     content: '';
     position: absolute;
-    background-image: url("/salon_du_fromage_2020_preprod_mobile/pictos/chiffre-continent.svg");
+    background-image: url("../salon_du_fromage_2020_preprod_mobile/pictos/chiffre-continent.svg");
     background-size: 100%;
     background-repeat: no-repeat;
     width: 8rem;
@@ -1866,7 +1870,7 @@ article.gla-item {
 
 .mod-catal .esf-tree .esf-has-sub-items>.esf-choice-container .esf-next-lvl::after {
     content: '';
-    background-image: url("/salon_du_fromage_2020_preprod_mobile/pictos/arrow-blue.svg");
+    background-image: url("../salon_du_fromage_2020_preprod_mobile/pictos/arrow-blue.svg");
     width: .9rem;
     height: 1.1rem;
     background-repeat: no-repeat
@@ -2299,7 +2303,7 @@ header.site-banner .inside .block form button i {
 
 header.site-banner .inside .block form button i::before {
     content: '';
-    background-image: url("/salon_du_fromage_2020_preprod_mobile/pictos/search.svg");
+    background-image: url("../salon_du_fromage_2020_preprod_mobile/pictos/search.svg");
     width: 1.6rem;
     height: 1.6rem;
     position: absolute;
@@ -2347,7 +2351,7 @@ header.site-banner .inside .block .ql-list .linkid726170 .btn-primary:hover {
 header.site-banner .inside .block .ql-list .linkid726170 .btn-primary::after {
     content: '';
     position: absolute;
-    background-image: url("/salon_du_fromage_2020_preprod_mobile/pictos/stand.svg");
+    background-image: url("../salon_du_fromage_2020_preprod_mobile/pictos/stand.svg");
     width: 3.2rem;
     height: 2.9rem;
     right: 1.5rem;
@@ -2523,7 +2527,7 @@ header.site-banner .inside #cxpmClientAccountWidget .not-logged .widget-text::be
     content: '';
     display: block;
     position: relative;
-    background-image: url("/salon_du_fromage_2020_preprod_mobile/pictos/account.svg");
+    background-image: url("../salon_du_fromage_2020_preprod_mobile/pictos/account.svg");
     width: 1.3rem;
     height: 1.4rem;
     bottom: .9rem
@@ -2666,7 +2670,7 @@ header.site-banner .inside .header-logo .header-logo-txt a.btn::after {
     content: '';
     display: block;
     position: relative;
-    background-image: url("/salon_du_fromage_2020_preprod_mobile/pictos/badge.svg");
+    background-image: url("../salon_du_fromage_2020_preprod_mobile/pictos/badge.svg");
     background-repeat: no-repeat;
     background-size: 100%;
     width: 2rem;
