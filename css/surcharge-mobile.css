@@ -1400,7 +1400,11 @@ i.icon-menu {
     font-family: "cxpm-Gudea-bold", Helvetica, Arial, sans-serif;
     border-radius: .5rem;
     position: relative;
-    font-size: 1.6rem !important
+    font-size: 1.6rem !important;
+    display: inline-block;
+    -webkit-hyphens: none;
+        -ms-hyphens: none;
+            hyphens: none
 }
 
 .what-profil .container-profil:nth-child(1) a::after {
@@ -1430,7 +1434,11 @@ i.icon-menu {
     font-family: "cxpm-Gudea-bold", Helvetica, Arial, sans-serif;
     border-radius: .5rem;
     position: relative;
-    font-size: 1.6rem !important
+    font-size: 1.6rem !important;
+    display: inline-block;
+    -webkit-hyphens: none;
+        -ms-hyphens: none;
+            hyphens: none
 }
 
 .what-profil .profil-visiteur a::after {
@@ -1734,6 +1742,17 @@ li {
     padding: 0;
     max-width: inherit;
     margin: 0
+}
+
+.ls-trigger:focus {
+    outline: none
+}
+
+.ls-lang-link {
+    color: #252525 !important;
+    font-family: "cxpm-Gudea-regular", Helvetica, Arial, sans-serif;
+    padding: 0;
+    text-align: center
 }
 
 header.site-banner {
@@ -2243,6 +2262,195 @@ ul {
     display: none
 }
 
+.newsletter-form {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 0;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 20;
+    -webkit-transition: opacity .3s, visibility .3s;
+    -o-transition: opacity .3s, visibility .3s;
+    transition: opacity .3s, visibility .3s
+}
+
+.newsletter-form.form-shown {
+    opacity: 1;
+    visibility: visible
+}
+
+.newsletter-form.form-shown .nf-main-content {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition-delay: .15s;
+         -o-transition-delay: .15s;
+            transition-delay: .15s
+}
+
+.newsletter-form:before {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 100%;
+    vertical-align: middle
+}
+
+.newsletter-form label {
+    display: none
+}
+
+.newsletter-form form {
+    display: block;
+    position: relative
+}
+
+.newsletter-form p {
+    margin: 0 0 27px
+}
+
+.newsletter-form p[class] {
+    margin: 0
+}
+
+.newsletter-form p:empty {
+    display: none
+}
+
+.newsletter-form .nf-main-content {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 545px;
+    padding: 43px 95px 74px 48px;
+    -webkit-transform: translateY(20%);
+    -ms-transform: translateY(20%);
+    transform: translateY(20%);
+    opacity: 0;
+    visibility: hidden;
+    vertical-align: middle;
+    font-size: 15px;
+    line-height: 1.73;
+    color: #1d1d1b;
+    text-align: left;
+    background: #fff;
+    transition: opacity .3s, visibility .3s, -webkit-transform .3s;
+    -webkit-transition: opacity .3s, visibility .3s, -webkit-transform .3s;
+    -o-transition: transform .3s, opacity .3s, visibility .3s;
+    transition: transform .3s, opacity .3s, visibility .3s;
+    transition: transform .3s, opacity .3s, visibility .3s, -webkit-transform .3s
+}
+
+.newsletter-form .btn-primary {
+    min-width: 137px
+}
+
+.newsletter-form .nf-form-submit {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #fff;
+    z-index: 3
+}
+
+.newsletter-form .nf-form-submit i {
+    display: none
+}
+
+.newsletter-form .nf-title {
+    font-size: 37px;
+    line-height: 1;
+    font-weight: 400;
+    color: #1d1d1b;
+    padding: 0;
+    margin: 0 0 28px;
+    border: 0
+}
+
+.newsletter-form .form-close {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 20px;
+    right: 20px;
+    -webkit-transition: 0;
+    -o-transition: 0;
+    transition: 0
+}
+
+.newsletter-form .form-close:hover {
+    opacity: .7
+}
+
+.newsletter-form .form-close:before {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg)
+}
+
+.newsletter-form .form-close:after {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.newsletter-form .nf-form-input {
+    float: none;
+    width: 100%
+}
+
+.newsletter-form .nf-form-input input {
+    display: block;
+    width: 100%;
+    height: 37px;
+    min-height: 0;
+    padding: 0 155px 0 18px;
+    font-size: 15px;
+    color: #1d1d1b
+}
+
+.newsletter-form .nf-form-input input::-webkit-input-placeholder {
+    opacity: 1 !important;
+    font-style: normal !important;
+    color: #1d1d1b
+}
+
+.newsletter-form .nf-form-input input::-moz-placeholder {
+    opacity: 1 !important;
+    font-style: normal !important;
+    color: #1d1d1b
+}
+
+.newsletter-form .nf-form-input input:-moz-placeholder {
+    opacity: 1 !important;
+    font-style: normal !important;
+    color: #1d1d1b
+}
+
+.newsletter-form .nf-form-input input:-ms-input-placeholder {
+    opacity: 1 !important;
+    font-style: normal !important;
+    color: #1d1d1b
+}
+
+.newsletter-form .form-close:before,
+.newsletter-form .form-close:after {
+    content: '';
+    position: absolute;
+    width: 34px;
+    height: 1px;
+    top: 50%;
+    left: -5px;
+    background: #1d1d1b
+}
+
 header.site-banner {
     z-index: 9999;
     position: fixed;
@@ -2324,7 +2532,7 @@ header.site-banner .inside .lang-switcher {
 
 header.site-banner .inside .lang-switcher button {
     height: 4.5rem;
-    font-family: "Gudea-bold", sans-serif;
+    font-family: "cxpm-Gudea-bold", Helvetica, Arial, sans-serif;
     position: relative;
     margin-right: 0;
     font-size: 1rem;
@@ -2467,7 +2675,7 @@ header.site-banner .inside .block .ql-list .ql-item .btn-primary {
     border: 0
 }
 
-header.site-banner .inside .block:nth-child(2) {
+header.site-banner .inside .block.quicklinks:first-child {
     background: #F4F4F4;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2480,11 +2688,11 @@ header.site-banner .inside .block:nth-child(2) {
         flex-basis: 100%
 }
 
-header.site-banner .inside .block:nth-child(2) .block-title {
+header.site-banner .inside .block.quicklinks:first-child .block-title {
     display: none
 }
 
-header.site-banner .inside .block:nth-child(2) ul.ql-list {
+header.site-banner .inside .block.quicklinks:first-child ul.ql-list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2493,7 +2701,7 @@ header.site-banner .inside .block:nth-child(2) ul.ql-list {
             align-items: center
 }
 
-header.site-banner .inside .block:nth-child(2) ul.ql-list li {
+header.site-banner .inside .block.quicklinks:first-child ul.ql-list li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2509,13 +2717,13 @@ header.site-banner .inside .block:nth-child(2) ul.ql-list li {
     cursor: pointer
 }
 
-header.site-banner .inside .block:nth-child(2) ul.ql-list li:hover {
+header.site-banner .inside .block.quicklinks:first-child ul.ql-list li:hover {
     -webkit-transform: scale(1.3);
         -ms-transform: scale(1.3);
             transform: scale(1.3)
 }
 
-header.site-banner .inside .block:nth-child(2) ul.ql-list li a {
+header.site-banner .inside .block.quicklinks:first-child ul.ql-list li a {
     font-size: 12px;
     color: #8C7971;
     padding: 0;
@@ -2524,7 +2732,7 @@ header.site-banner .inside .block:nth-child(2) ul.ql-list li a {
     height: 4.5rem
 }
 
-header.site-banner .inside .block:nth-child(2) ul.ql-list li a i {
+header.site-banner .inside .block.quicklinks:first-child ul.ql-list li a i {
     -webkit-transform: translateY(-3px) scale(1.1);
         -ms-transform: translateY(-3px) scale(1.1);
             transform: translateY(-3px) scale(1.1);
@@ -2535,33 +2743,33 @@ header.site-banner .inside .block:nth-child(2) ul.ql-list li a i {
     bottom: 0.8rem
 }
 
-header.site-banner .inside .block:nth-child(2) ul.ql-list li a i:hover {
+header.site-banner .inside .block.quicklinks:first-child ul.ql-list li a i:hover {
     color: #64C2C8 !important
 }
 
-header.site-banner .inside .block:nth-child(2) ul.ql-list li a span {
+header.site-banner .inside .block.quicklinks:first-child ul.ql-list li a span {
     display: none
 }
 
-header.site-banner .inside .block:nth-child(2) ul.ql-list li .icon {
+header.site-banner .inside .block.quicklinks:first-child ul.ql-list li .icon {
     margin-right: 0
 }
 
-header.site-banner .inside .block:nth-child(2) ul.ql-list li.linkid726175 {
+header.site-banner .inside .block.quicklinks:first-child ul.ql-list li.linkid726175 {
     display: none
 }
 
 @media screen and (max-width: 359px) {
-    header.site-banner .inside .block:nth-child(2) ul.ql-list li.linkid726173 {
+    header.site-banner .inside .block.quicklinks:first-child ul.ql-list li.linkid726173 {
         display: none
     }
 }
 
-header.site-banner .inside .block:nth-child(2) ul.ql-list .linkid726174 a i {
+header.site-banner .inside .block.quicklinks:first-child ul.ql-list .linkid726174 a i {
     position: relative
 }
 
-header.site-banner .inside .block:nth-child(2) ul.ql-list .linkid726174 a i::before {
+header.site-banner .inside .block.quicklinks:first-child ul.ql-list .linkid726174 a i::before {
     content: '';
     background-image: url("../salon_du_fromage_2020_preprod_mobile/pictos/insta.svg");
     width: 1.6rem;
@@ -2574,24 +2782,24 @@ header.site-banner .inside .block:nth-child(2) ul.ql-list .linkid726174 a i::bef
             transform: translate(-50%, 15%)
 }
 
-header.site-banner .inside .block:nth-child(2) ul.ql-list .linkid728314 {
+header.site-banner .inside .block.quicklinks:first-child ul.ql-list .linkid728314 {
     -webkit-box-ordinal-group: -2;
         -ms-flex-order: -3;
             order: -3
 }
 
-header.site-banner .inside .block:nth-child(2) ul.ql-list .linkid728314:hover {
+header.site-banner .inside .block.quicklinks:first-child ul.ql-list .linkid728314:hover {
     -webkit-transform: none;
         -ms-transform: none;
             transform: none
 }
 
-header.site-banner .inside .block:nth-child(2) ul.ql-list .linkid728314 a {
+header.site-banner .inside .block.quicklinks:first-child ul.ql-list .linkid728314 a {
     width: 8.4rem;
     position: relative
 }
 
-header.site-banner .inside .block:nth-child(2) ul.ql-list .linkid728314 a::before {
+header.site-banner .inside .block.quicklinks:first-child ul.ql-list .linkid728314 a::before {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2615,7 +2823,7 @@ header.site-banner .inside .block:nth-child(2) ul.ql-list .linkid728314 a::befor
     height: 4.5rem
 }
 
-header.site-banner .inside .block:nth-child(3) {
+header.site-banner .inside .block.quicklinks+.quicklinks {
     background: #F4F4F4;
     position: absolute;
     z-index: 999;
@@ -2623,7 +2831,7 @@ header.site-banner .inside .block:nth-child(3) {
     top: 0
 }
 
-header.site-banner .inside .block:nth-child(3) .block-title {
+header.site-banner .inside .block.quicklinks+.quicklinks .block-title {
     display: none
 }
 
@@ -3242,6 +3450,10 @@ header.site-banner .inside nav .mn-menu-line ul.mn-menu-lvl1 ul.mn-menu-lvl2 li.
     color: white;
     font-family: "cxpm-Gudea-bold", Helvetica, Arial, sans-serif !important;
     border-radius: .5rem;
+    -webkit-hyphens: none;
+        -ms-hyphens: none;
+            hyphens: none;
+    display: inline-block;
     position: relative;
     font-size: 1.2rem;
     margin-top: 2.5rem
@@ -3608,7 +3820,11 @@ html[lang="fr"] body:not(.front) #zone1 .main-navigation .mn-menu-line .mn-menu 
     font-family: "cxpm-Gudea-bold", Helvetica, Arial, sans-serif;
     border-radius: .5rem;
     position: relative;
-    margin-left: 0
+    margin-left: 0;
+    display: inline-block;
+    -webkit-hyphens: none;
+        -ms-hyphens: none;
+            hyphens: none
 }
 
 .front .global-wrapper .home-mosaic .txt-mosaic a:hover::after {
@@ -3822,7 +4038,10 @@ html[lang="fr"] body:not(.front) #zone1 .main-navigation .mn-menu-line .mn-menu 
     font-family: "cxpm-Gudea-bold", Helvetica, Arial, sans-serif;
     text-align: center;
     margin: 0 auto 3.5rem;
-    display: inline-block
+    display: inline-block;
+    -webkit-hyphens: none;
+        -ms-hyphens: none;
+            hyphens: none
 }
 
 .front .global-wrapper #zone2 .list-articles .inside a.link-view-all:hover i::before {
@@ -4098,7 +4317,9 @@ html[lang="fr"] body:not(.front) #zone1 .main-navigation .mn-menu-line .mn-menu 
     text-align: center;
     margin: 0;
     padding-bottom: 2.5rem;
-    padding-top: 4.5rem
+    padding-top: 4.5rem;
+    padding-left: 0;
+    padding-right: 0
 }
 
 .front .global-wrapper #zone2 .edito-img-droite .inside .edito-item-btn a,
@@ -4108,6 +4329,10 @@ html[lang="fr"] body:not(.front) #zone1 .main-navigation .mn-menu-line .mn-menu 
     color: white;
     font-family: "cxpm-Gudea-bold", Helvetica, Arial, sans-serif;
     border-radius: .5rem;
+    display: inline-block;
+    -webkit-hyphens: none;
+        -ms-hyphens: none;
+            hyphens: none;
     position: relative;
     font-size: 1.6rem
 }
@@ -4203,7 +4428,11 @@ html[lang="fr"] body:not(.front) #zone1 .main-navigation .mn-menu-line .mn-menu 
     background: #8C7971;
     color: #fff !important;
     font-family: "cxpm-Gudea-bold", Helvetica, Arial, sans-serif;
+    -webkit-hyphens: none;
+        -ms-hyphens: none;
+            hyphens: none;
     border-radius: .5rem;
+    display: inline-block;
     position: relative
 }
 
@@ -4877,7 +5106,8 @@ body.article h1 {
     text-decoration: none;
     background-size: 100% 200%;
     background: #64C2C8;
-    border-radius: 0.5rem
+    border-radius: 0.5rem;
+    display: inline-block
 }
 
 .article-wrapper .focus1 a.lien1:hover {
@@ -4891,6 +5121,7 @@ body.article h1 {
     background-size: 100% 200%;
     background: #8C7971;
     border-radius: 0.5rem;
+    display: inline-block;
     margin: 0
 }
 
@@ -4914,7 +5145,8 @@ body.article h1 {
     font-family: "Open-sans-regular", Helvetica, Arial, sans-serif;
     background-color: transparent;
     text-decoration: none;
-    border-radius: 0.5rem
+    border-radius: 0.5rem;
+    display: inline-block
 }
 
 .article-wrapper .focus2 a.lien2:hover,
@@ -6103,6 +6335,52 @@ body.article h1 {
 .content383140 .block.block-page.mod-catal.catal-ex .catal-ex-item:nth-last-child(2),
 .content399163 .block.block-page.mod-catal.catal-ex .catal-ex-item:nth-last-child(2) {
     border-bottom: 0 none !important
+}
+
+.search .search-result .global-search-form {
+    display: none
+}
+
+.search .search-result .box-light {
+    background-image: url(../salon_du_fromage_2020_preprod_desktop/img/background-bandeau.jpg);
+    background-size: cover
+}
+
+.search .search-result .box-light h1 {
+    margin: 0 0 5rem 0;
+    padding: 5rem 0rem 4.5rem 0rem
+}
+
+.search .search-result .inside {
+    max-width: 116rem;
+    display: block;
+    margin: 0 auto 10rem
+}
+
+.search .search-result .inside h2 {
+    margin-bottom: 2rem
+}
+
+.search .search-result .inside .sr-item-title {
+    margin-bottom: 1rem
+}
+
+.search .search-result .inside .sr-item-title a {
+    color: #252525
+}
+
+.search .search-result .inside .sr-item-title a:hover {
+    color: #64C2C8;
+    text-decoration: none
+}
+
+.sr-term {
+    color: #64C2C8
+}
+
+.sr-item {
+    padding-bottom: 3rem;
+    margin-bottom: 3.5rem
 }
 
 div.sitemap::before {
