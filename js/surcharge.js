@@ -64,7 +64,6 @@
         }).on('load scroll', function(){
           var winST = $win.scrollTop();
       
-          fixHeader(winST);
           animateElement(winST);
         });
       }
